@@ -1,0 +1,2 @@
+class HtmlDocument:
+    pass
