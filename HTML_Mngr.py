@@ -1,14 +1,21 @@
+from HTML_Doc import HtmlDocument
 class HtmlManager:
 
-    def __init__(self, input):
-        f = open('anish.html','w')
+    def __init__(self):
+        self.document= None #object but not right now
+
+    def create_html(self):
         message = """<html>
             <head></head>
-            body><p>"""+input+"""</p></body>
+            <body><p> It's Woke Anish </p></body>
             </html>"""
-
-        f.write(message)
-        f.close()
+        new_doc=HtmlDocument(message)
+        self.document=new_doc
+    
+    def save_html(self):
+         f = open('anish.html','w')
+         f.write(self.document.content)
+         f.close()
 
 #defines functions that let you create a new HTML document, and save the document to your files.
 
