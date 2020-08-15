@@ -5,11 +5,16 @@ class HtmlManager:
         self.document= None #object but not right now
 
     def create_html(self):
-        message = """<html>
+        message2 = """<html>
             <head></head>
-            <body><p> Yo It's Woke Anish </p></body>
+            <body><p> Buddha Blessed 🙏 </p></body>
             </html>"""
-        new_doc=HtmlDocument(message)
+        message = """<img src="https://images.homedepot-static.com/productImages/3aaa74d2-7f2c-4b16-8b24-f369f2af8c1d/svn/alpine-corporation-garden-statues-gem170-64_1000.jpg"
+            alt="The Buddha"
+            width="300"
+            height="300"
+            title="The Buddha">"""
+        new_doc=HtmlDocument(message +message2)
         self.document=new_doc
     
     def save_html(self):
